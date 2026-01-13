@@ -33,26 +33,25 @@ export function VisualTour() {
   }, [activeTab])
 
   const exteriorImages = [
-    { src: "/exterior-1.jpg", alt: "Podium View" },
-    { src: "/exterior-2.webp", alt: "Amenities View" },
-    // { src: "/exterior-3.webp", alt: "Exterior View 3" },
-    // { src: "/exterior-4.webp", alt: "Exterior View 4" },
-    { src: "/exterior-5.webp", alt: "Seaview from Balcony" },
-    // { src: "/exterior-6.webp", alt: "Exterior View 6" },
-    { src: "/exterior-7.webp", alt: "Front Facade" },
-    // { src: "/exterior-8.webp", alt: "Exterior View 8" },
+    { src: "/Treppan-Tower-exterior-1.webp", alt: "Exterior - Podium View" },
+    { src: "/Treppan-Tower-exterior-2.webp", alt: "Exterior - Amenities View" },
+    { src: "/Treppan-Tower-exterior-3.webp", alt: "Exterior - Aerial View" },
+    { src: "/Treppan-Tower-exterior-4.webp", alt: "Exterior - Entrance" },
+    { src: "/Treppan-Tower-exterior-5.webp", alt: "Exterior - Seaview from Balcony" },
+    { src: "/Treppan-Tower-exterior-6.webp", alt: "Exterior - Side Facade" },
+    { src: "/Treppan-Tower-exterior-7.webp", alt: "Exterior - Front Facade" },
   ]
 
   const interiorImages = [
-    { src: "/Interior-01.webp", alt: "3 BR - Bedroom" },
-    { src: "/Interior-02.webp", alt: "3 BR - Living Room" },
-    { src: "/Interior-03.webp", alt: "3 BR - Bathroom" },
-    { src: "/Interior-04.webp", alt: "3 BR - Dining Area and Living Room" },
-    { src: "/Interior-05.webp", alt: "2 BR - Bedroom" },
-    { src: "/Interior-06.webp", alt: "2 BR - Living Room" },
-    { src: "/Interior-07.webp", alt: "2 BR - Entrance Lobby" },
-    { src: "/Interior-08.webp", alt: "2 BR - Bathroom" },
-    { src: "/Interior-09.webp", alt: "Living Room" },
+    { src: "/Treppan-Tower-interior-1.webp", alt: "Interior - Living Room" },
+    { src: "/Treppan-Tower-interior-2.webp", alt: "Interior - Kitchen" },
+    { src: "/Treppan-Tower-interior-3.webp", alt: "Interior - Bedroom" },
+    { src: "/Treppan-Tower-interior-4.webp", alt: "Interior - Bathroom" },
+    { src: "/Treppan-Tower-interior-5.webp", alt: "Interior - Dining Area" },
+    { src: "/Treppan-Tower-interior-6.webp", alt: "Interior - Entrance Lobby" },
+    { src: "/Treppan-Tower-interior-7.webp", alt: "Interior - Study" },
+    { src: "/Treppan-Tower-interior-8.webp", alt: "Interior - Balcony View" },
+    { src: "/Treppan-Tower-interior-9.webp", alt: "Interior - Master Suite" },
     // { src: "/Interior-10.webp", alt: "Interior View 10" },
     // { src: "/Interior-11.webp", alt: "Interior View 11" },
     // { src: "/Interior-12.webp", alt: "Interior View 12" },
@@ -60,15 +59,13 @@ export function VisualTour() {
 
   // Amenities tab: show actual images from public/
   const amenitiesImages = [
-    { src: "/aminities-1.webp", alt: "Seaview Rooftop Infinity Pool" },
-    { src: "/aminities-2.webp", alt: "Balcony Jacuzzi" },
-    { src: "/aminities-3.webp", alt: "Rooftop Lounge" },
-    { src: "/aminities-4.webp", alt: "10th Floor Private Courtyard" },
-    { src: "/aminities-5.webp", alt: "Podium Infinity Pool" },
-    { src: "/aminities-6.webp", alt: "Bamboo Oxygen Park" },
-    { src: "/aminities-7.webp", alt: "Male / Female Spa" },
-    { src: "/aminities-8.webp", alt: "Indoor Gym" },
-    { src: "/exterior-3.webp", alt: "Wall Climbing" },
+    { src: "/Treppan-Tower-amenities-1.webp", alt: "Amenity - Rooftop Infinity Pool" },
+    { src: "/Treppan-Tower-amenities-2.webp", alt: "Amenity - Balcony Jacuzzi" },
+    { src: "/Treppan-Tower-amenities-3.webp", alt: "Amenity - Rooftop Lounge" },
+    { src: "/Treppan-Tower-amenities-4.webp", alt: "Amenity - Private Courtyard" },
+    { src: "/Treppan-Tower-amenities-5.webp", alt: "Amenity - Podium Infinity Pool" },
+    { src: "/Treppan-Tower-amenities-6.webp", alt: "Amenity - Bamboo Oxygen Park" },
+    { src: "/Treppan-Tower-amenities-7.webp", alt: "Amenity - Spa" },
   ];
 
   const images = activeTab === "exterior" ? exteriorImages : activeTab === "interior" ? interiorImages : amenitiesImages;
@@ -83,12 +80,12 @@ export function VisualTour() {
 
 
   return (
-    <section ref={sectionRef} className=" pb-[80px] md:py-32 bg-gradient-to-b from-gray-50 to-white">
+    <section ref={sectionRef} className="py-24 md:py-32 bg-gray-100">
       <div className="container mx-auto px-4 md:px-6">
         <h2
           className={`text-xl sm:text-3xl md:text-4xl font-bold text-center mb-10 md:mb-16 lg:mb-20 leading-tight text-gray-900 transition-all duration-1000 delay-100 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
         >
-          Explore Treppan Serenique Residences
+          Explore Treppan Tower
         </h2>
 
         <div

@@ -10,8 +10,8 @@ import { Modal } from './form-modals/common-form-modal';
 
 export default function StickyFooter() {
   const pathname = usePathname();
-  const isGlobalPage = pathname === "/global";
-  const price = isGlobalPage ? "$ 790K" : "AED 2.9 Million";
+  const isGlobalPage = typeof pathname === 'string' && pathname.startsWith("/global");
+  const price = isGlobalPage ? "$ 790K" : "AED 1.15M";
 
   // Always show the sticky footer, even at the top (hero section)
   const showFooter = true;
@@ -58,7 +58,7 @@ export default function StickyFooter() {
               />
             </div>
             <div className="flex flex-col leading-tight">
-              <span className="text-base sticky-footer-text"> <b>2 & 3 BR </b> Fully </span>
+              <span className="text-base sticky-footer-text"> <b>1, 2 & 3 BR </b> Fully </span>
               <span className="font-normal text-base sticky-footer-text">Furnished Residences</span>
             </div>
             <div className="flex flex-col leading-tight">

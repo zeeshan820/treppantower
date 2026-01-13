@@ -9,7 +9,7 @@ import { Modal } from "./form-modals/common-form-modal"
 
 export function Overview({ isGlobalPage }: { isGlobalPage?: boolean }) {
 
-  const price = isGlobalPage ? "$ 790K" : "AED 2.9 Million";
+  const price = isGlobalPage ? "$ 790K" : "AED 1.15M";
 
   const [isVisible, setIsVisible] = useState(false)
   const sectionRef = useRef<HTMLDivElement>(null)

@@ -38,7 +38,7 @@ export function Location() {
   const data = activeTab === "landmark" ? landmarks : activeTab === "amenities" ? amenitiesData : transport
 
   return (
-    <section className="py-24 md:py-32 bg-gray-50">
+    <section className="py-24 md:py-32 bg-gray-100">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center">
           <div className="inline-flex items-center gap-1 sm:gap-2 px-3 sm:px-6 py-1.5 sm:py-3 rounded-[4px] bg-[#DAAA97]/10 border border-[#DAAA97]/20 mb-4 sm:mb-6">

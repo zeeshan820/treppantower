@@ -15,12 +15,12 @@ export function Hero({ isGlobalPage }: { isGlobalPage?: boolean }) {
     { value: "53+", label: "Resort Amenities" },
     { value: "90&nbsp;Sec.", label: "From Beach" },
     { value: "$ 790K", label: "Starting Price" },
-    { value: "2 & 3 BR", label: "Fully furnished" },
+    { value: "1, 2 & 3 BR", label: "Fully furnished" },
   ] : [
     { value: "53+", label: "Resort Amenities" },
     { value: "90&nbsp;Sec.", label: "From Beach" },
-    { value: "AED 2.9M", label: "Starting Price" },
-    { value: "2 & 3 BR", label: "Fully furnished" },
+    { value: "AED 1.15M", label: "Starting Price" },
+    { value: "1, 2 & 3 BR", label: "Fully furnished" },
   ];
 
   useEffect(() => {
@@ -32,7 +32,7 @@ export function Hero({ isGlobalPage }: { isGlobalPage?: boolean }) {
       <div
         className="absolute inset-0 bg-cover bg-center transition-transform duration-12000 ease-out scale-110"
         style={{
-          backgroundImage: "url('/hero-5.jpg')",
+          backgroundImage: "url('/treppantower-hero-banner.jpg')",
           transform: isVisible ? "scale(1)" : "scale(1.2)",
         }}
       >
