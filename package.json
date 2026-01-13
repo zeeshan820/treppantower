@@ -1,7 +1,9 @@
 {
-  "name": "serenique-campaigns",
+  "name": "treppantower-campaigns",
   "version": "0.1.0",
   "private": true,
+  "author": "Ritik Raj",
+  "license": "MIT",
   "scripts": {
     "build": "next build",
     "dev": "next dev",
