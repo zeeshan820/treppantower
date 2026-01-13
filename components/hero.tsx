@@ -110,7 +110,7 @@ export function Hero({ isGlobalPage }: { isGlobalPage?: boolean }) {
           />
         </div>
 
-        {/*
+        
         <div className="mt-10 sm:mt-16 grid grid-cols-1 sm:grid-cols-4 gap-4 sm:gap-8 max-w-5xl mx-auto animate-fade-in animation-delay-800 itemscenter justify-center place-items-center">
           {tabs.map((stat, index) => (
             <div key={index} className="group">
@@ -121,7 +121,7 @@ export function Hero({ isGlobalPage }: { isGlobalPage?: boolean }) {
             </div>
           ))}
         </div>
-        */}
+       
       </div>
     </section>
   )

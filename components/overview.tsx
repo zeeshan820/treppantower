@@ -227,7 +227,7 @@ export function Overview({ isGlobalPage }: { isGlobalPage?: boolean }) {
                   <div className="flex items-baseline gap-2 justify-center sm:justify-start">
                     <span className="text-4xl sm:text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-[#DAAA97] to-white animate-shimmer" style={{ backgroundSize: '200% auto', animationDuration: '12s' }}>{price}</span>
                   </div>
-                  <p className="text-white/60 text-sm mt-2">Starting Price</p>
+                  <p className="text-white/60 text-sm mt-2">Premium Residences</p>
                 </div>
 
                 {/* <DownloadBrochureModal pdfUrl="/Treppan-Serenique-Brochure.pdf">

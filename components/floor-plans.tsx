@@ -136,41 +136,54 @@ export function FloorPlans() {
 
             {/* Lightbox Modal */}
             <Dialog open={lightboxOpen} onOpenChange={setLightboxOpen}>
-              <DialogContent className="flex flex-col items-center justify-center bg-black/90 p-0 max-w-[90vw] w-full max-h-[70vh] overflow-hidden">
-                <DialogTitle className="sr-only">Floor Plan Image Viewer</DialogTitle>
-                <button
-                  onClick={closeLightbox}
-                  className="absolute top-4 right-4 z-20 text-white bg-black/60 hover:bg-black/80 rounded-[4px] px-2"
-                  aria-label="Close"
-                >
-                  <span className="text-2xl">×</span>
-                </button>
-                <button
-                  onClick={prevLightbox}
-                  className="absolute left-2 top-1/2 -translate-y-1/2 z-20 bg-black/60 hover:bg-black/80 text-white rounded-[4px] p-2"
-                  aria-label="Previous image"
-                >
-                  <ChevronLeft className="w-8 h-8" />
-                </button>
-                <div className="relative w-full h-[60vh] flex items-center justify-center">
-                  <Image
-                    src={plans[lightboxIndex] || "/placeholder.svg"}
-                    alt={`Floor plan large view ${lightboxIndex + 1}`}
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-                <button
-                  onClick={nextLightbox}
-                  className="absolute right-2 top-1/2 -translate-y-1/2 z-20 bg-black/60 hover:bg-black/80 text-white rounded-[4px] p-2"
-                  aria-label="Next image"
-                >
-                  <ChevronRight className="w-8 h-8" />
-                </button>
-                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white text-sm bg-black/60 px-4 py-1 rounded-[4px]">
-                  {lightboxIndex + 1} / {plans.length}
-                </div>
-              </DialogContent>
+              <DialogContent className="flex flex-col items-center justify-center bg-transparent p-0 !max-w-full w-[99vw] h-[92vh] overflow-hidden rounded-xl !sm:max-w-none">
+                  <DialogTitle className="sr-only">Floor Plan Image Viewer</DialogTitle>
+
+                  {/* Close button */}
+                  <button
+                    onClick={closeLightbox}
+                    className="absolute top-4 right-4 z-40 text-white p-3 md:p-4 hover:opacity-90 transition-opacity duration-200 focus:outline-none"
+                    aria-label="Close"
+                  >
+                    <span className="text-3xl md:text-4xl font-bold leading-none">×</span>
+                  </button>
+
+                  {/* Prev control */}
+                  <button
+                    onClick={prevLightbox}
+                    className="absolute left-6 top-1/2 -translate-y-1/2 z-40 bg-white text-gray-800 hover:bg-gray-100 rounded-full p-3 md:p-4 shadow-xl border border-black/5 transition-transform duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#DAAA97]/30"
+                    aria-label="Previous image"
+                  >
+                    <ChevronLeft className="w-7 h-7 md:w-8 md:h-8" />
+                  </button>
+
+                  {/* Image container */}
+                  <div className="relative w-full h-full max-w-full mx-auto flex items-center justify-center bg-black/90 rounded-md overflow-hidden">
+                    <Image
+                      src={plans[lightboxIndex] || "/placeholder.svg"}
+                      alt={`Floor plan large view ${lightboxIndex + 1}`}
+                      width={2400}
+                      height={1600}
+                      sizes="100vw"
+                      className="object-contain w-auto max-w-[97vw] h-full"
+                      style={{ objectPosition: 'center' }}
+                    />
+                  </div>
+
+                  {/* Next control */}
+                  <button
+                    onClick={nextLightbox}
+                    className="absolute right-6 top-1/2 -translate-y-1/2 z-40 bg-white text-gray-800 hover:bg-gray-100 rounded-full p-3 md:p-4 shadow-xl border border-black/5 transition-transform duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#DAAA97]/30"
+                    aria-label="Next image"
+                  >
+                    <ChevronRight className="w-7 h-7 md:w-8 md:h-8" />
+                  </button>
+
+                  {/* Footer: index and download */}
+                  <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-3 text-white text-sm bg-black/60 px-4 py-2 rounded-full shadow-md backdrop-blur-sm">
+                    <div className="font-medium">{lightboxIndex + 1} / {plans.length}</div>
+                  </div>
+                </DialogContent>
             </Dialog>
 
             <div className="flex justify-center gap-3 mt-4 sm:mt-6 md:mt-8">
