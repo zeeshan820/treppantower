@@ -94,30 +94,21 @@ export function VisualTour() {
           <Button
             onClick={() => setActiveTab("exterior")}
             variant={activeTab === "exterior" ? "default" : "outline"}
-            className={`px-6 md:px-8 py-5 md:py-6 text-sm md:text-base transition-all duration-300 transform hover:scale-105 ${activeTab === "exterior"
-              ? "bg-[#DAAA97] hover:bg-[#c99a87] text-white shadow-lg shadow-[#DAAA97]/30"
-              : "text-gray-700 hover:border-[#DAAA97] hover:text-[#DAAA97]"
-              }`}
+            className={`px-6 md:px-8 py-3 md:py-5 text-sm md:text-base font-semibold rounded-lg transition-all duration-400 ${activeTab === "exterior" ? "bg-gradient-to-r from-[#DAAA97] to-[#c99a87] text-white shadow-lg scale-105" : "bg-white/10 border border-white/12 text-gray-700/90 backdrop-blur-sm shadow-sm hover:shadow-md hover:bg-white/20"}`}
           >
             Exterior
           </Button>
           <Button
             onClick={() => setActiveTab("interior")}
             variant={activeTab === "interior" ? "default" : "outline"}
-            className={`px-6 md:px-8 py-5 md:py-6 text-sm md:text-base transition-all duration-300 transform hover:scale-105 ${activeTab === "interior"
-              ? "bg-[#DAAA97] hover:bg-[#c99a87] text-white shadow-lg shadow-[#DAAA97]/30"
-              : "text-gray-700 hover:border-[#DAAA97] hover:text-[#DAAA97]"
-              }`}
+            className={`px-6 md:px-8 py-3 md:py-5 text-sm md:text-base font-semibold rounded-lg transition-all duration-400 ${activeTab === "interior" ? "bg-gradient-to-r from-[#DAAA97] to-[#c99a87] text-white shadow-lg scale-105" : "bg-white/10 border border-white/12 text-gray-700/90 backdrop-blur-sm shadow-sm hover:shadow-md hover:bg-white/20"}`}
           >
             Interior
           </Button>
           <Button
             onClick={() => setActiveTab("amenities")}
             variant={activeTab === "amenities" ? "default" : "outline"}
-            className={`px-6 md:px-8 py-5 md:py-6 text-sm md:text-base transition-all duration-300 transform hover:scale-105 ${activeTab === "amenities"
-              ? "bg-[#DAAA97] hover:bg-[#c99a87] text-white shadow-lg shadow-[#DAAA97]/30"
-              : "text-gray-700 hover:border-[#DAAA97] hover:text-[#DAAA97]"
-              }`}
+            className={`px-6 md:px-8 py-3 md:py-5 text-sm md:text-base font-semibold rounded-lg transition-all duration-400 ${activeTab === "amenities" ? "bg-gradient-to-r from-[#DAAA97] to-[#c99a87] text-white shadow-lg scale-105" : "bg-white/10 border border-white/12 text-gray-700/90 backdrop-blur-sm shadow-sm hover:shadow-md hover:bg-white/20"}`}
           >
             Amenities
           </Button>

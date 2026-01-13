@@ -31,17 +31,17 @@ export function CallToAction() {
   return (
     <section
       ref={sectionRef}
-      className="relative py-24 md:py-32 bg-linear-to-br from-[#3d5a80] via-[#4a6890] to-[#5a7a9f] overflow-hidden"
+      className="relative py-24 md:py-32 bg-gradient-to-br from-[#22313f] via-[#334a62] to-[#3d5a80] overflow-hidden"
     >
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-white rounded-lg blur-3xl animate-float" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#DAAA97] rounded-lg blur-3xl animate-float-delayed" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-300 rounded-lg blur-3xl animate-pulse-slow" />
+      <div className="absolute inset-0 opacity-25 pointer-events-none">
+        <div className="absolute -top-12 left-6 w-80 h-80 bg-white/6 rounded-2xl blur-3xl animate-float" />
+        <div className="absolute bottom-10 -right-10 w-96 h-96 bg-[#DAAA97]/20 rounded-2xl blur-3xl animate-float-delayed" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[480px] h-[480px] bg-[#334058]/6 rounded-2xl blur-3xl animate-pulse-slow" />
       </div>
 
       <div
-        className="absolute inset-0 opacity-5"
-        style={{ backgroundImage: "radial-gradient(circle, white 1px, transparent 1px)", backgroundSize: "50px 50px" }}
+        className="absolute inset-0 opacity-6"
+        style={{ backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px)", backgroundSize: "48px 48px" }}
       />
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
@@ -49,22 +49,21 @@ export function CallToAction() {
           className={`max-w-4xl mx-auto transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
         >
           <div className="flex justify-center animate-fade-in">
-            <div className="inline-flex items-center gap-1 sm:gap-2 px-3 sm:px-6 py-1.5 sm:py-3 rounded-lg bg-[#DAAA97]/10 border border-[#DAAA97]/20 mb-4 sm:mb-6">
-              <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-[#DAAA97]" />
-              <p className="text-xs sm:text-sm uppercase tracking-[0.15em] sm:tracking-[0.2em] text-[#DAAA97] font-bold">UAE's First Longevity Living Community
-              </p>
+            <div className="inline-flex items-center gap-1 sm:gap-2 px-3 sm:px-6 py-1.5 sm:py-3 rounded-xl bg-gradient-to-r from-[#DAAA97]/15 to-[#DAAA97]/8 border border-[#DAAA97]/20 mb-4 sm:mb-6">
+              <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-[#DAAA97]" />
+              <p className="text-xs sm:text-sm uppercase tracking-[0.15em] sm:tracking-[0.2em] text-[#DAAA97] font-bold">UAE's First Longevity Living Community</p>
             </div>
           </div>
 
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 text-center animate-fade-in animation-delay-200 leading-tight">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white mb-4 text-center animate-fade-in animation-delay-200 leading-tight tracking-tight drop-shadow-lg">
             Ready to Experience Treppan Tower?
           </h2>
 
-          <p className="text-white/90 text-base md:text-xl leading-relaxed mb-4 text-center animate-fade-in animation-delay-300 px-4">
+          <p className="text-white/90 text-base md:text-lg leading-relaxed mb-3 text-center animate-fade-in animation-delay-300 px-4 max-w-3xl mx-auto">
             Step into a world where thoughtful design meets future-ready living.
           </p>
 
-          <p className="text-white/90 text-base md:text-xl leading-relaxed mb-12 text-center animate-fade-in animation-delay-300 px-4">
+          <p className="text-white/80 text-base md:text-lg leading-relaxed mb-10 text-center animate-fade-in animation-delay-300 px-4 max-w-3xl mx-auto">
             Experience a tranquil, villa-led sanctuary with calm at its core. From AI-enabled smart homes to wellness-centred design and 20+ curated amenities, Treppan Tower transforms everyday life into a rhythm of balance and ease.
           </p>
 
@@ -87,27 +86,13 @@ export function CallToAction() {
           </div>
           */}
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center text-center align-middle animate-fade-in animation-delay-500">
-            {/* <BookMeetingModal>
-              <Button
-                size="lg"
-                className="bg-[#DAAA97] hover:bg-[#c99a87] text-white px-8 md:px-10 py-5 md:py-6 text-base md:text-lg transform hover:scale-110 transition-all duration-300 shadow-2xl hover:shadow-[#DAAA97]/50 relative overflow-hidden group"
-              >
-                <span className="relative z-10">Book a Meeting</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
-              </Button>
-            </BookMeetingModal>
-            <DownloadBrochureModal2>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-[#334058] px-8 md:px-10 py-5 md:py-6 text-base md:text-lg bg-transparent transform hover:scale-110 transition-all duration-300 shadow-2xl"
-              >
-                Download Brochure
-              </Button>
-            </DownloadBrochureModal2> */}
-            <Modal title="Book a meeting" />
-            <Modal title="Download Brochure" pdfUrl="/Treppan-Serenique-Brochure.pdf" />
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-center animate-fade-in animation-delay-500">
+            <div className="w-full sm:w-auto flex justify-center">
+              <Modal title="Book a meeting" />
+            </div>
+            <div className="w-full sm:w-auto flex justify-center">
+              <Modal title="Download Brochure" pdfUrl="/Treppan-Serenique-Brochure.pdf" />
+            </div>
           </div>
         </div>
       </div>

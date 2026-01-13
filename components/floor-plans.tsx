@@ -61,7 +61,7 @@ export function FloorPlans() {
   }
 
   return (
-    <section className="py-16 sm:py-20 md:py-24 lg:py-32 bg-gradient-to-b from-white via-gray-50 to-white">
+    <section className="py-16 sm:py-20 md:py-24 lg:py-32 bg-gradient-to-b from-white via-[#f7f5f2] to-white">
       <div className="container mx-auto px-4 sm:px-6">
         {/* <div className="text-center">
           <div className="inline-flex items-center gap-1 sm:gap-2 px-3 sm:px-6 py-1.5 sm:py-3 rounded-[4px] bg-[#DAAA97]/10 border border-[#DAAA97]/20 mb-4 sm:mb-6">
@@ -70,35 +70,33 @@ export function FloorPlans() {
           </div>
         </div> */}
 
-        <h2 className="text-xl sm:text-3xl md:text-4xl font-bold text-center mb-6 sm:mb-8 leading-tight text-gray-900 px-4">
-          
-          
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-center mb-4 sm:mb-6 leading-tight text-[#334058] px-4">
           Discover the Floor Plans
         </h2>
 
-        <p className="text-center text-gray-700 mb-8 sm:mb-12 md:mb-16 max-w-3xl mx-auto text-sm sm:text-base md:text-lg px-4">
-          Treppan Tower offers 1–3 bedroom residences designed for light-filled, modern living.
+        <p className="text-center text-gray-600 mb-8 sm:mb-12 md:mb-16 max-w-3xl mx-auto text-sm sm:text-base md:text-lg px-4">
+          1–3 bedroom residences that prioritise light, circulation and flexible living.
         </p>
 
         <div className="flex justify-center gap-2 sm:gap-3 md:gap-4 mb-8 sm:mb-12 md:mb-16 px-4">
           <Button
             onClick={() => handleTabChange("1bedroom")}
             variant={activeTab === "1bedroom" ? "default" : "outline"}
-            className={`px-6 sm:px-8 md:px-12 py-4 sm:py-5 md:py-6 lg:py-7 text-sm sm:text-base md:text-lg font-bold rounded-[4px] transition-all duration-500 ${activeTab === "1bedroom" ? "bg-gradient-to-r from-[#DAAA97] to-[#c99a87] hover:from-[#e5baa7] hover:to-[#d9aa97] text-white shadow-xl hover:shadow-2xl scale-105" : "text-gray-700 hover:border-[#DAAA97] hover:text-[#DAAA97] border-2"}`}
+            className={`px-6 sm:px-8 md:px-12 py-3 sm:py-4 md:py-5 text-sm sm:text-base md:text-lg font-semibold rounded-lg transition-all duration-400 ${activeTab === "1bedroom" ? "bg-gradient-to-r from-[#DAAA97] to-[#c99a87] text-white shadow-lg scale-105" : "bg-white/10 border border-white/12 text-gray-700/90 backdrop-blur-sm shadow-sm hover:shadow-md hover:bg-white/20"}`}
           >
             1 Bedroom
           </Button>
           <Button
             onClick={() => handleTabChange("2bedroom")}
             variant={activeTab === "2bedroom" ? "default" : "outline"}
-            className={`px-6 sm:px-8 md:px-12 py-4 sm:py-5 md:py-6 lg:py-7 text-sm sm:text-base md:text-lg font-bold rounded-[4px] transition-all duration-500 ${activeTab === "2bedroom" ? "bg-gradient-to-r from-[#DAAA97] to-[#c99a87] hover:from-[#e5baa7] hover:to-[#d9aa97] text-white shadow-xl hover:shadow-2xl scale-105" : "text-gray-700 hover:border-[#DAAA97] hover:text-[#DAAA97] border-2"}`}
+            className={`px-6 sm:px-8 md:px-12 py-3 sm:py-4 md:py-5 text-sm sm:text-base md:text-lg font-semibold rounded-lg transition-all duration-400 ${activeTab === "2bedroom" ? "bg-gradient-to-r from-[#DAAA97] to-[#c99a87] text-white shadow-lg scale-105" : "bg-white/10 border border-white/12 text-gray-700/90 backdrop-blur-sm shadow-sm hover:shadow-md hover:bg-white/20"}`}
           >
             2 Bedroom
           </Button>
           <Button
             onClick={() => handleTabChange("3bedroom")}
             variant={activeTab === "3bedroom" ? "default" : "outline"}
-            className={`px-6 sm:px-8 md:px-12 py-4 sm:py-5 md:py-6 lg:py-7 text-sm sm:text-base md:text-lg font-bold rounded-[4px] transition-all duration-500 ${activeTab === "3bedroom" ? "bg-gradient-to-r from-[#DAAA97] to-[#c99a87] hover:from-[#e5baa7] hover:to-[#d9aa97] text-white shadow-xl hover:shadow-2xl scale-105" : "text-gray-700 hover:border-[#DAAA97] hover:text-[#DAAA97] border-2"}`}
+            className={`px-6 sm:px-8 md:px-12 py-3 sm:py-4 md:py-5 text-sm sm:text-base md:text-lg font-semibold rounded-lg transition-all duration-400 ${activeTab === "3bedroom" ? "bg-gradient-to-r from-[#DAAA97] to-[#c99a87] text-white shadow-lg scale-105" : "bg-white/10 border border-white/12 text-gray-700/90 backdrop-blur-sm shadow-sm hover:shadow-md hover:bg-white/20"}`}
           >
             3 Bedroom
           </Button>
@@ -106,7 +104,7 @@ export function FloorPlans() {
 
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 lg:gap-16 items-start px-4">
           <div className="relative order-1">
-            <div className="relative aspect-[4/3] rounded-[4px] overflow-hidden shadow-2xl bg-white border-2 border-gray-100 hover:shadow-[#DAAA97]/20 hover:border-[#DAAA97]/30 transition-all duration-500">
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl bg-white border border-gray-100 hover:shadow-[#DAAA97]/20 hover:border-[#DAAA97]/30 transition-all duration-500">
               <Image
                 src={plans[currentIndex] || "/placeholder.svg"}
                 alt={`Floor plan ${currentIndex + 1}`}
@@ -118,20 +116,20 @@ export function FloorPlans() {
 
               <button
                 onClick={prevSlide}
-                className="absolute left-2 sm:left-4 md:left-6 top-1/2 -translate-y-1/2 bg-white hover:bg-[#DAAA97] hover:text-white p-2 sm:p-3 md:p-4 rounded-[4px] shadow-2xl transition-all duration-300 hover:scale-110 z-10 border-2 border-gray-100"
+                className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/70 text-white p-3 rounded-full shadow-xl transition-all duration-300 hover:scale-105 z-10 backdrop-blur-sm border border-white/10"
                 aria-label="Previous floor plan"
               >
-                <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
+                <ChevronLeft className="w-5 h-5" />
               </button>
               <button
                 onClick={nextSlide}
-                className="absolute right-2 sm:right-4 md:right-6 top-1/2 -translate-y-1/2 bg-white hover:bg-[#DAAA97] hover:text-white p-2 sm:p-3 md:p-4 rounded-[4px] shadow-2xl transition-all duration-300 hover:scale-110 z-10 border-2 border-gray-100"
+                className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/70 text-white p-3 rounded-full shadow-xl transition-all duration-300 hover:scale-105 z-10 backdrop-blur-sm border border-white/10"
                 aria-label="Next floor plan"
               >
-                <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
+                <ChevronRight className="w-5 h-5" />
               </button>
 
-              <div className="absolute bottom-3 sm:bottom-4 md:bottom-6 right-3 sm:right-4 md:right-6 bg-gradient-to-r from-[#334058] to-[#273244] text-white px-3 sm:px-4 md:px-5 py-1.5 sm:py-2 md:py-3 rounded-[4px] text-xs sm:text-sm md:text-base font-bold shadow-xl">
+              <div className="absolute bottom-4 right-4 bg-black/55 text-white px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium shadow-lg">
                 {currentIndex + 1} / {plans.length}
               </div>
             </div>
@@ -175,16 +173,12 @@ export function FloorPlans() {
               </DialogContent>
             </Dialog>
 
-            <div className="flex justify-center gap-2 sm:gap-3 mt-4 sm:mt-6 md:mt-8">
+            <div className="flex justify-center gap-3 mt-4 sm:mt-6 md:mt-8">
               {plans.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentIndex(index)}
-                  className={`h-2 sm:h-2.5 md:h-3 rounded-[4px] transition-all duration-500 ${
-                    index === currentIndex
-                      ? "bg-gradient-to-r from-[#DAAA97] to-[#c99a87] w-8 sm:w-12 md:w-16 shadow-lg"
-                      : "bg-gray-300 w-2 sm:w-2.5 md:w-3 hover:bg-gray-400 hover:w-4 sm:hover:w-5 md:hover:w-6"
-                  }`}
+                  className={`rounded-full transition-all duration-300 flex items-center justify-center ${index === currentIndex ? "bg-gradient-to-r from-[#DAAA97] to-[#c99a87] w-10 h-3 shadow-md" : "bg-gray-300 w-3 h-3 hover:bg-gray-400"}`}
                   aria-label={`Go to floor plan ${index + 1}`}
                 />
               ))}
@@ -192,53 +186,50 @@ export function FloorPlans() {
           </div>
 
           <div className="space-y-4 sm:space-y-6 md:space-y-8 order-2">
-            <div className="bg-gradient-to-br from-white to-gray-50 rounded-[4px] p-6 sm:p-8 md:p-10 shadow-2xl border border-gray-100 hover:shadow-[#DAAA97]/20 hover:border-[#DAAA97]/30 transition-all duration-500">
-              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6 sm:mb-8 text-gray-900 flex items-center gap-2 sm:gap-3">
-                <Home className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-[#DAAA97]" />
-                Floor Plan Details
-              </h3>
+            <div className="bg-white rounded-3xl p-6 sm:p-8 md:p-10 shadow-2xl border border-gray-50 ring-1 ring-black/3">
+              <div className="flex items-start justify-between">
+                <div className="flex items-center gap-4">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-[#FAF6F3] to-white ring-1 ring-[#DAAA97]/10 shadow-sm">
+                    <Home className="w-6 h-6 text-[#DAAA97]" />
+                  </div>
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-extrabold text-[#22313f]">Floor Plan Details</h3>
+                </div>
+               
+              </div>
 
-              <div className="overflow-x-auto mb-6 sm:mb-8 md:mb-10 -mx-2 px-2">
-                <table className="w-full min-w-[280px]">
+              <div className="overflow-x-auto mb-4 sm:mb-6 md:mb-8 mt-6 -mx-2 px-2">
+                <table className="w-full min-w-[300px] text-sm md:text-base rounded-lg overflow-hidden">
                   <thead>
-                    <tr className="border-b-2 border-[#DAAA97]/20">
-                      <th className="text-left py-3 sm:py-4 md:py-5 text-gray-900 font-bold text-sm sm:text-base md:text-lg">
-                        Type
-                      </th>
-                      <th className="text-left py-3 sm:py-4 md:py-5 text-gray-900 font-bold text-sm sm:text-base md:text-lg">
-                        <div className="flex items-center gap-1 sm:gap-2">
-                          <Ruler className="w-4 h-4 sm:w-5 sm:h-5 text-[#DAAA97]" />
+                    <tr className="bg-white">
+                      <th className="text-left py-3 sm:py-4 md:py-5 text-gray-700 font-medium">Type</th>
+                      <th className="text-left py-3 sm:py-4 md:py-5 text-gray-700 font-medium">
+                        <div className="flex items-center gap-2">
+                          <Ruler className="w-4 h-4 text-[#DAAA97]" />
                           <span className="hidden sm:inline">Total Area</span>
                           <span className="sm:hidden">Area</span>
                         </div>
                       </th>
                     </tr>
                   </thead>
-                  <tbody>
-                    <tr className="border-b border-gray-100 hover:bg-[#DAAA97]/5 transition-colors">
-                      <td className="py-3 sm:py-4 md:py-5 font-semibold text-sm sm:text-base md:text-lg">1 Bedroom</td>
-                      <td className="py-3 sm:py-4 md:py-5 text-gray-700 text-xs sm:text-sm md:text-base lg:text-lg">
-                        628 - 1,165 sq. ft.
-                      </td>
+                  <tbody className="bg-white divide-y divide-gray-100">
+                    <tr>
+                      <td className="py-3 sm:py-4 md:py-5 font-semibold text-gray-800">1 Bedroom</td>
+                      <td className="py-3 sm:py-4 md:py-5 text-gray-600">628 - 1,165 sq. ft.</td>
                     </tr>
-                    <tr className="border-b border-gray-100 hover:bg-[#DAAA97]/5 transition-colors">
-                      <td className="py-3 sm:py-4 md:py-5 font-semibold text-sm sm:text-base md:text-lg">2 Bedroom</td>
-                      <td className="py-3 sm:py-4 md:py-5 text-gray-700 text-xs sm:text-sm md:text-base lg:text-lg">
-                        1,028 - 1,571 sq. ft.
-                      </td>
+                    <tr>
+                      <td className="py-3 sm:py-4 md:py-5 font-semibold text-gray-800">2 Bedroom</td>
+                      <td className="py-3 sm:py-4 md:py-5 text-gray-600">1,028 - 1,571 sq. ft.</td>
                     </tr>
-                    <tr className="hover:bg-[#DAAA97]/5 transition-colors">
-                      <td className="py-3 sm:py-4 md:py-5 font-semibold text-sm sm:text-base md:text-lg">3 Bedroom Skyvilla</td>
-                      <td className="py-3 sm:py-4 md:py-5 text-gray-700 text-xs sm:text-sm md:text-base lg:text-lg">
-                        2,640 - 2,915 sq. ft.
-                      </td>
+                    <tr>
+                      <td className="py-3 sm:py-4 md:py-5 font-semibold text-gray-800">3 Bedroom Skyvilla</td>
+                      <td className="py-3 sm:py-4 md:py-5 text-gray-600">2,640 - 2,915 sq. ft.</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
 
               <DownloadFloorPlanModal>
-                <Button className="w-full mt-6 sm:mt-8 md:mt-10 bg-linear-to-r from-[#DAAA97] to-[#c99a87] hover:from-[#e5baa7] hover:to-[#d9aa97] text-white py-5 sm:py-6 md:py-7 text-sm sm:text-base md:text-lg font-bold flex items-center justify-center gap-2 sm:gap-3 shadow-2xl hover:shadow-[#DAAA97]/50 transition-all duration-500 hover:scale-105 rounded-[4px]">
+                <Button className="w-full mt-4 sm:mt-6 md:mt-8 bg-gradient-to-r from-[#DAAA97] to-[#c99a87] text-white py-3 sm:py-4 md:py-5 text-sm md:text-lg font-semibold flex items-center justify-center gap-3 shadow-lg rounded-xl">
                   <Download className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
                   Download Floor Plan
                 </Button>
