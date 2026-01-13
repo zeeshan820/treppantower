@@ -80,7 +80,7 @@ export function VisualTour() {
 
 
   return (
-    <section ref={sectionRef} className="py-24 md:py-32 bg-gray-100">
+    <section ref={sectionRef} className="py-24 md:py-32">
       <div className="container mx-auto px-4 md:px-6">
         <h2
           className={`text-xl sm:text-3xl md:text-4xl font-bold text-center mb-10 md:mb-16 lg:mb-20 leading-tight text-gray-900 transition-all duration-1000 delay-100 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
@@ -124,47 +124,64 @@ export function VisualTour() {
         </div>
 
         <div className="max-w-6xl mx-auto relative">
-          <div className="relative aspect-video rounded-xl md:rounded-[4px] overflow-hidden shadow-2xl">
+          <div className="relative aspect-video rounded-xl overflow-hidden shadow-2xl ring-1 ring-black/6">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(255,255,255,0.03)_0%,transparent_35%)] mix-blend-screen pointer-events-none" />
+
             <Image
               src={images[currentIndex].src || "/placeholder.svg"}
               alt={images[currentIndex].alt}
               fill
-              className="object-cover"
+              className="object-cover transform transition-transform duration-1000 ease-out group-hover:scale-105"
             />
 
-            {/* Navigation Buttons */}
+            {/* Stylish Navigation Buttons */}
             <button
               onClick={prevSlide}
-              className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white p-2 md:p-3 rounded-[4px] shadow-lg transition-all duration-300 hover:scale-110 z-10"
+              className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/60 text-white p-3 md:p-4 rounded-full shadow-xl transition-all duration-300 hover:scale-105 z-20 backdrop-blur-sm"
+              aria-label="Previous slide"
             >
-              <ChevronLeft className="w-4 h-4 md:w-6 md:h-6 text-gray-800" />
+              <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
             </button>
             <button
               onClick={nextSlide}
-              className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white p-2 md:p-3 rounded-[4px] shadow-lg transition-all duration-300 hover:scale-110 z-10"
+              className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/60 text-white p-3 md:p-4 rounded-full shadow-xl transition-all duration-300 hover:scale-105 z-20 backdrop-blur-sm"
+              aria-label="Next slide"
             >
-              <ChevronRight className="w-4 h-4 md:w-6 md:h-6 text-gray-800" />
+              <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
             </button>
 
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
-
-            {/* Image caption */}
-            <div className="absolute bottom-4 md:bottom-6 left-4 md:left-6 text-white z-10">
-              <p className="text-lg md:text-2xl font-bold drop-shadow-lg">{images[currentIndex].alt}</p>
-              <p className="text-xs md:text-sm text-white/80">
-                {currentIndex + 1} / {images.length}
-              </p>
+            {/* Compact left-side caption: simple 'X of Y' small text, no highlights or progress */}
+            <div className="absolute left-6 bottom-6 z-30">
+              <div className="max-w-[360px] bg-black/55 backdrop-blur-md rounded-xl px-4 py-3 text-white shadow-lg border border-white/6">
+                {
+                  (() => {
+                    const alt = images[currentIndex].alt || ''
+                    const parts = alt.split(' - ')
+                    const category = parts.length > 1 ? parts[0] : ''
+                    const title = parts.length > 1 ? parts.slice(1).join(' - ') : alt
+                    return (
+                      <div>
+                        {category && <p className="text-xs uppercase text-[#DAAA97] font-semibold tracking-wide">{category}</p>}
+                          <p className="text-lg md:text-2xl font-extrabold leading-tight mt-1 text-white drop-shadow-[0_4px_14px_rgba(0,0,0,0.45)] tracking-tight">{title}</p>
+                          <div className="mt-2 h-1 w-14 rounded-full bg-gradient-to-r from-[#DAAA97] via-[#c99b86] to-transparent opacity-60" />
+                          <p className="text-xs text-white/75 mt-2">{currentIndex + 1} of {images.length}</p>
+                      </div>
+                    )
+                  })()
+                }
+              </div>
             </div>
           </div>
 
-          {/* Thumbnail dots */}
-          <div className="flex justify-center gap-2 mt-6">
+          {/* Thumbnail dots (pills) */}
+          <div className="flex justify-center gap-3 mt-6">
             {images.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
-                className={`h-2 md:h-3 rounded-[4px] transition-all duration-300 ${index === currentIndex ? "bg-[#DAAA97] w-8 md:w-10" : "bg-gray-300 w-2 md:w-3 hover:bg-gray-400"
-                  }`}
+                className={`rounded-full transition-all duration-300 flex items-center justify-center ${index === currentIndex ? "bg-[#DAAA97] w-10 h-3 md:w-12 md:h-3 shadow-md" : "bg-gray-300 w-3 h-3 md:w-3 md:h-3 hover:bg-gray-400"}`}
+                aria-label={`Go to image ${index + 1}`}
               />
             ))}
           </div>

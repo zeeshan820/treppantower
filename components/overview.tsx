@@ -46,7 +46,7 @@ export function Overview({ isGlobalPage }: { isGlobalPage?: boolean }) {
   return (
     <section
       ref={sectionRef}
-      className="relative py-20 md:py-28 lg:py-28 bg-gradient-to-br from-slate-50 via-white to-[#DAAA97]/5 overflow-hidden"
+      className="relative py-20 md:py-28 lg:py-28 bg-gradient-to-br from-white via-[#f7f5f2] to-[#f3efe9] overflow-hidden"
     >
       {/* Premium Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -70,42 +70,54 @@ export function Overview({ isGlobalPage }: { isGlobalPage?: boolean }) {
             <p className="text-sm uppercase tracking-[0.25em] text-[#DAAA97] font-bold">Overview</p>
           </div> */}
 
-          <h2 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight transition-all duration-1000 delay-100 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
-            <span className="bg-gradient-to-r from-[#334058] via-[#4a5d7a] to-[#334058] bg-clip-text text-transparent">A Haven of Curated Urban Living</span>
+          <h2 className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight transition-all duration-1000 delay-100 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+            <span style={{ animationDuration: '8s' }} className="bg-gradient-to-r from-[#334058] via-[#DAAA97] to-[#4a5d7a] bg-clip-text text-transparent tracking-tight max-w-3xl mx-auto block drop-shadow-[0_8px_30px_rgba(51,64,88,0.15)] animate-shimmer transition-transform duration-500 ease-out hover:scale-105">
+              A Haven of Curated Urban Living
+            </span>
+            <span className="mt-3 block h-1 w-36 bg-gradient-to-r from-transparent via-[#DAAA97] to-transparent rounded-full mx-auto opacity-90" />
           </h2>
         </div>
 
         <div className="max-w-7xl mx-auto">
           {/* Hero Image with Text Overlay */}
           <div className={`relative mb-16 md:mb-20 transition-all duration-1000 delay-200 ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-95"}`}>
-            <div className="relative rounded-2xl md:rounded-3xl overflow-hidden group shadow-2xl shadow-[#334058]/20">
-              <div className="relative aspect-[4/3] sm:aspect-[16/9] md:aspect-[21/9] lg:aspect-[21/8]">
-                <Image
-                  src="/treppan-tower-overview.webp"
-                  alt="Treppan Tower Overview"
-                  fill
-                  className="object-cover transform group-hover:scale-105 transition-transform duration-1000"
-                  sizes="100vw"
-                  priority
-                />
-                {/* Stronger overlays for legible text */}
-                <div className="absolute inset-0 bg-black/30" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#334058]/70 via-[#334058]/30 to-transparent" />
-                <div className="absolute inset-0 bg-gradient-to-r from-[#334058]/60 via-transparent to-transparent" />
+            <div className="relative rounded-2xl md:rounded-3xl overflow-visible group transition-all duration-700">
+              <div className="rounded-2xl overflow-hidden p-0.5 bg-gradient-to-br from-white/20 to-transparent shadow-sm">
+                <div className="relative aspect-[4/3] sm:aspect-[16/9] md:aspect-[21/9] lg:aspect-[21/8] rounded-lg overflow-hidden bg-gray-50">
+                  <Image
+                    src="/treppan-tower-overview.webp"
+                    alt="Treppan Tower Overview"
+                    fill
+                    className="object-cover transform group-hover:scale-102 transition-transform duration-1000"
+                    sizes="100vw"
+                    priority
+                  />
+                  {/* Stronger overlays for legible text */}
+                  <div className="absolute inset-0 bg-black/30" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#334058]/70 via-[#334058]/30 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#334058]/60 via-transparent to-transparent" />
+                  {/* Vignette & subtle radial focus to draw the eye */}
+                  <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/40 via-transparent to-transparent mix-blend-multiply opacity-60" />
+                  <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(circle at 40% 60%, rgba(255,255,255,0.04) 0%, transparent 40%)' }} />
+                  <div className="absolute inset-0 pointer-events-none rounded-lg border border-white/6 opacity-60" />
+                </div>
               </div>
 
               {/* Floating Content on Image - Desktop Only */}
-                <div className="hidden md:block absolute bottom-0 left-0 right-0 p-8 md:p-12">
-                <div className="max-w-3xl space-y-4 text-white drop-shadow-2xl">
-                  <p className="text-lg md:text-xl font-light leading-relaxed drop-shadow-lg">
-                    Treppan Tower is a serene sanctuary, located in Jumeirah Village Triangle. It creates a home where families and communities can truly flourish.
-                  </p>
-                  <p className="text-lg md:text-xl font-light leading-relaxed drop-shadow-lg">
-                    The lobby welcomes residents with greenery and a gentle, refreshing breeze. Sunlight illuminates polished textures, crafting warmth, elegance, and calm serenity.
-                  </p>
-
+                <div className="hidden md:block absolute bottom-8 left-1/2 -translate-x-1/2 p-6 md:p-8 w-[min(78%,900px)] rounded-2xl bg-gradient-to-br from-black/55 via-black/35 to-transparent backdrop-blur-md border border-white/8 shadow-2xl transform transition-all duration-700 group-hover:-translate-y-1">
+                  <div className="flex items-start gap-4 text-white">
+                    <div className="w-1.5 h-12 rounded-full bg-gradient-to-b from-[#DAAA97] to-[#c99b86] flex-shrink-0 mt-1" />
+                    <div className="max-w-3xl">
+                      <p className="text-lg md:text-xl font-semibold leading-tight">
+                        Treppan Tower is a serene sanctuary, located in Jumeirah Village Triangle. It creates a home where families and communities can truly flourish.
+                      </p>
+                      <div className="my-3 w-12 h-0.5 bg-white/10 rounded" />
+                      <p className="text-sm md:text-base text-white/80 leading-relaxed">
+                        The lobby welcomes residents with greenery and a gentle, refreshing breeze. Sunlight illuminates polished textures, crafting warmth, elegance, and calm serenity.
+                      </p>
+                    </div>
+                  </div>
                 </div>
-              </div>
 
               {/* Corner Accents - Desktop Only */}
               <div className="hidden md:block absolute top-4 left-4 w-12 h-12 border-l-2 border-t-2 border-[#DAAA97]/60 rounded-tl-xl" />
@@ -122,28 +134,38 @@ export function Overview({ isGlobalPage }: { isGlobalPage?: boolean }) {
                 <span className="text-xs font-bold text-[#334058] uppercase tracking-wider">Welcome</span>
               </div>
               <p className="text-white/90 text-sm sm:text-base leading-relaxed pt-2">
-                Treppan Tower is a serene sanctuary in Jumeirah Village Triangle. Spacious apartments and sky villas offer breathtaking views and private gardens, fostering a connected, vibrant community.
+                Treppan Tower is a serene sanctuary, located in Jumeirah Village Triangle. It creates a home where families and communities can truly flourish.
+              </p>
+              <p className="text-white/80 text-sm sm:text-base leading-relaxed mt-3">
+                The lobby welcomes residents with greenery and a gentle, refreshing breeze. Sunlight illuminates polished textures, crafting warmth, elegance, and calm serenity.
               </p>
             </div>
           </div>
 
           {/* Description Cards */}
           <div className={`grid md:grid-cols-2 gap-6 mb-16 md:mb-20 transition-all duration-1000 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
-            <div className="group p-6 sm:p-8 rounded-2xl bg-white/80 backdrop-blur-sm border border-[#DAAA97]/20 shadow-xl shadow-[#DAAA97]/5 hover:shadow-2xl hover:shadow-[#DAAA97]/10 hover:border-[#DAAA97]/40 transition-all duration-500 hover:-translate-y-1">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#DAAA97] to-[#c99b86] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                <Droplets className="w-6 h-6 text-white" />
+            <div className="group relative p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-white/90 to-[#FAF6F3] backdrop-blur-sm border border-transparent shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 overflow-hidden">
+              <div className="absolute -left-3 top-4 w-2 h-20 rounded-full bg-gradient-to-b from-[#DAAA97] to-[#c99b86] opacity-80" />
+              <div className="relative z-10">
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#DAAA97] to-[#c99b86] flex items-center justify-center mb-4 group-hover:scale-105 transition-transform duration-300 ring-1 ring-[#DAAA97]/15">
+                  <Droplets className="w-7 h-7 text-white" />
+                </div>
+                <p className="text-gray-700 leading-relaxed text-base sm:text-lg">
+                  Homes are thoughtfully designed to nurture well-being and effortless living. Smart features, sustainable systems, and wellness amenities ensure care in every detail.
+                </p>
               </div>
-              <p className="text-gray-700 leading-relaxed text-base sm:text-lg">
-                Homes are thoughtfully designed to nurture well-being and effortless living. Smart features, sustainable systems, and wellness amenities ensure care in every detail.
-              </p>
             </div>
-            <div className="group p-6 sm:p-8 rounded-2xl bg-white/80 backdrop-blur-sm border border-[#334058]/10 shadow-xl shadow-[#334058]/5 hover:shadow-2xl hover:shadow-[#334058]/10 hover:border-[#334058]/30 transition-all duration-500 hover:-translate-y-1">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#334058] to-[#4a5d7a] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                <TreePalm className="w-6 h-6 text-white" />
+
+            <div className="group relative p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-white/90 to-[#EEF2F6] backdrop-blur-sm border border-[#334058]/6 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 overflow-hidden">
+              <div className="absolute -left-3 top-4 w-2 h-20 rounded-full bg-gradient-to-b from-[#334058] to-[#4a5d7a] opacity-60" />
+              <div className="relative z-10">
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#334058] to-[#4a5d7a] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <TreePalm className="w-7 h-7 text-white" />
+                </div>
+                <p className="text-gray-700 leading-relaxed text-base sm:text-lg">
+                  Spacious apartments and sky villas offer breathtaking views and private gardens. Treppan Tower fosters a connected, vibrant community, where life feels complete.
+                </p>
               </div>
-              <p className="text-gray-700 leading-relaxed text-base sm:text-lg">
-                Spacious apartments and sky villas offer breathtaking views and private gardens. Treppan Tower fosters a connected, vibrant community, where life feels complete.
-              </p>
             </div>
           </div>
 
@@ -168,8 +190,8 @@ export function Overview({ isGlobalPage }: { isGlobalPage?: boolean }) {
 
                   {/* Icon Container */}
                   <div className="relative mb-4">
-                    <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#DAAA97]/20 to-[#DAAA97]/5 flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 border border-[#DAAA97]/20">
-                      <feature.icon className="w-7 h-7 text-[#DAAA97] group-hover:text-[#c99b86] transition-colors duration-300" />
+                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#FAF6F3] to-[#F3ECE6] flex items-center justify-center group-hover:scale-105 transition-all duration-300 ring-1 ring-[#DAAA97]/10">
+                      <feature.icon className="w-8 h-8 text-[#9b7a58] transition-colors duration-300" />
                     </div>
                     <div className="absolute -top-1 -right-1 w-3 h-3 bg-[#DAAA97] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-ping" />
                   </div>
@@ -203,7 +225,7 @@ export function Overview({ isGlobalPage }: { isGlobalPage?: boolean }) {
                     <p className="text-xs text-[#DAAA97] uppercase tracking-[0.2em] font-bold">Starting From</p>
                   </div>
                   <div className="flex items-baseline gap-2 justify-center sm:justify-start">
-                    <span className="text-4xl sm:text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-[#DAAA97] to-white animate-shimmer" style={{ backgroundSize: '200% auto' }}>{price}</span>
+                    <span className="text-4xl sm:text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-[#DAAA97] to-white animate-shimmer" style={{ backgroundSize: '200% auto', animationDuration: '12s' }}>{price}</span>
                   </div>
                   <p className="text-white/60 text-sm mt-2">Starting Price</p>
                 </div>
