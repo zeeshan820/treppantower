@@ -12,7 +12,7 @@ const ThankYouPage = () => {
 
   useEffect(() => {
     setIsVisible(true);
-    
+
     // Trigger PDF download on page load
     const timer = setTimeout(() => {
       const link = document.createElement('a');
@@ -37,9 +37,8 @@ const ThankYouPage = () => {
         <div className="max-w-2xl w-full">
           {/* Logo */}
           <div
-            className={`mb-8 flex justify-center transition-all duration-1000 ${
-              isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
-            }`}
+            className={`mb-8 flex justify-center transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
+              }`}
           >
             <img
               src="/treppan-serenique-logo.webp"
@@ -50,9 +49,8 @@ const ThankYouPage = () => {
 
           {/* Check Icon */}
           <div
-            className={`flex justify-center mb-8 transition-all duration-1000 delay-200 ${
-              isVisible ? "opacity-100 scale-100" : "opacity-0 scale-0"
-            }`}
+            className={`flex justify-center mb-8 transition-all duration-1000 delay-200 ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-0"
+              }`}
           >
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-br from-[#DAAA97]/30 to-[#334058]/30 rounded-full blur-2xl" />
@@ -64,9 +62,8 @@ const ThankYouPage = () => {
 
           {/* Content */}
           <div
-            className={`text-center transition-all duration-1000 delay-300 ${
-              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-            }`}
+            className={`text-center transition-all duration-1000 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+              }`}
           >
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 text-gray-900">
               Thank You!
@@ -113,9 +110,8 @@ const ThankYouPage = () => {
 
           {/* Bottom Message */}
           <div
-            className={`mt-16 pt-8 border-t border-gray-200 text-center transition-all duration-1000 delay-500 ${
-              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-            }`}
+            className={`mt-16 pt-8 border-t border-gray-200 text-center transition-all duration-1000 delay-500 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+              }`}
           >
             <p className="text-sm text-gray-500 mb-2">
               Have questions? Our team is here to help.
