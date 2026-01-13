@@ -2,7 +2,7 @@ import type React from "react"
 import type { Metadata } from "next"
 import { DM_Sans } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
-import StickyFooter from "@/components/sticky-footer"
+// StickyFooter moved to specific pages so root (`/`) can remain empty
 import "./globals.css"
 import Script from "next/script"
 
@@ -84,7 +84,6 @@ export default function RootLayout({
       </head>
       <body className={`${dmSans.variable} font-sans antialiased`}>
         {children}
-        <StickyFooter />
         <Analytics />
       </body>
     </html>
