@@ -26,47 +26,44 @@ export function Amenities() {
   }, [])
 
   const amenitiesList = [
-    "Hyperbaric Oxygen Therapy",
-    "Red Light Therapy",
-    "Flotation Therapy",
-    "Cryotherapy",
-    "Himalayan Salt Brick Sauna",
-    "Meditation Pods",
-    "Bamboo Oxygen Park",
-    "Koi Pond",
-    "Aqua Gym",
-    "Mini Golf Course",
-    "Green House Cafe",
-    "BBQ Pits",
-    "Outdoor Cinema",
-    "Hot & Cold Plunge",
-    "Male & Female Spa",
-    "Outdoor Party Deck",
+    "Infinity Pool",
+    "Gym",
+    "Outdoor Calisthenics",
+    "Yoga Deck",
+    "Greenhouse Cafe",
     "Kids Play Area",
-    "Open Kitchen & Grill",
+    "Outdoor Theatre",
+    "Party Deck",
+    "Barbeque",
+    "Pergola Seating",
+    "Library",
+    "Green Lounge",
+    "Swimming Pool",
+    "Kids Pool",
   ]
 
   // Helper to map amenity name to icon file name
   function getAmenityIcon(amenity: string): string {
     const map: Record<string, string> = {
+      "Infinity Pool": "infinityswimmingpool.svg",
+      "Gym": "indoorgym.svg",
+      "Outdoor Calisthenics": "outdoorgym.svg",
+      "Yoga Deck": "meditationzone.svg",
+      "Greenhouse Cafe": "greenhousecafe.svg",
+      "Kids Play Area": "Kidsplayarea.svg",
+      "Outdoor Theatre": "outdoorcinema.svg",
+      "Party Deck": "outdoorpartydeck.svg",
+      "Barbeque": "bbqpits.svg",
+      "Pergola Seating": "cabanaseating.svg",
+      "Library": "meetingpods.svg",
+      "Green Lounge": "poolsidelounge.svg",
+      "Swimming Pool": "Splashpool.svg",
+      "Kids Pool": "Kidspool.svg",
+      // fallback mappings for any legacy names
       "Hyperbaric Oxygen Therapy": "hyperbaricoxygen.svg",
       "Red Light Therapy": "redlighttherapy.svg",
       "Flotation Therapy": "floatationtherapy.svg",
       "Cryotherapy": "cryotherapy.svg",
-      "Himalayan Salt Brick Sauna": "himalayansaltbricksauna.svg",
-      "Meditation Pods": "Meditationpods.svg",
-      "Bamboo Oxygen Park": "Bamboooxygenapark.svg",
-      "Koi Pond": "Koipond.svg",
-      "Aqua Gym": "Aquagym.svg",
-      "Mini Golf Course": "minigoldcourt.svg",
-      "Green House Cafe": "greenhousecafe.svg",
-      "BBQ Pits": "bbqpits.svg",
-      "Outdoor Cinema": "outdoorcinema.svg",
-      "Hot & Cold Plunge": "coldplunge.svg", // fallback to cold plunge
-      "Male & Female Spa": "malespa.svg", // fallback to male spa
-      "Outdoor Party Deck": "outdoorpartydeck.svg",
-      "Kids Play Area": "Kidsplayarea.svg",
-      "Open Kitchen & Grill": "openkitchen.svg", // fallback to open kitchen
     }
     return map[amenity] || "icon.svg"
   }
@@ -105,7 +102,7 @@ export function Amenities() {
           <h2
             className={`text-[28px] sm:text-[32px] md:text-[36px] lg:text-[40px] font-bold text-center mb-20 leading-tight transition-all duration-1000 delay-100 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
           >
-            <span className="text-white">53+ Resort-Style Experiences Await</span>
+            <span className="text-white">A Lifestyle Enriched by Exceptional Amenities</span>
           </h2>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">

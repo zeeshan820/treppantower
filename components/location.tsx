@@ -8,31 +8,31 @@ import { MapPin, Clock, Navigation, Sparkles } from "lucide-react"
 export function Location() {
   const [activeTab, setActiveTab] = useState<"landmark" | "amenities" | "transport">("landmark")
 
-  // Sorted ascending by distance (as in image)
+  // Landmarks provided by user
   const landmarks = [
-    { name: "Dubai Islands Beach", time: "90 sec", distance: "500 m", icon: '/location/landmark/locationiconsvg-01.svg' },
-    { name: "Dubai Islands Marina", time: "4 min", distance: "2.1 km", icon: '/location/landmark/locationiconsvg-04.svg' },
-    { name: "Downtown Dubai and DIFC", time: "20 min", distance: "21 km", icon: '/location/landmark/locationiconsvg-03.svg' },
-    { name: "Dubai International Airport", time: "23 min", distance: "21 km", icon: '/location/landmark/locationiconsvg-02.svg' },
+    { name: "Jumeirah Lake Towers", time: "11 min", distance: "9.6 km", icon: '/location/amenities/locationiconsvg-12.svg' },
+    { name: "Dubai Marina Beach", time: "12 min", distance: "9.7 km", icon: '/location/landmark/locationiconsvg-01.svg' },
+    { name: "Palm Jumeirah", time: "17 min", distance: "16.7 km", icon: '/location/landmark/locationiconsvg-03.svg' },
+    { name: "Palm Jebel Ali", time: "23 min", distance: "26.2 km", icon: '/location/landmark/locationiconsvg-03.svg' },
+    { name: "Business Bay", time: "28 min", distance: "29 km", icon: '/location/amenities/locationiconsvg-08.svg' },
   ]
 
-  // Sorted ascending by distance
+  // Amenities provided by user
   const amenitiesData = [
-    { name: "Waterfront Market", time: "2 min", distance: "500 m", icon: '/location/amenities/locationiconsvg-07.svg' },
-    { name: "Water sports & Scuba Diving", time: "2 min", distance: "500 m", icon: '/location/amenities/locationiconsvg-10.svg' },
-    { name: "Centara Mirage Beach Resort", time: "3 min", distance: "1.2 km", icon: '/location/amenities/locationiconsvg-09.svg' },
-    { name: "Dubai Islands Marina", time: "4 min", distance: "2.1 km", icon: '/location/amenities/locationiconsvg-08.svg' },
-    { name: "Dubai Islands Mall", time: "5 min", distance: "3 km", icon: '/location/amenities/locationiconsvg-08.svg' },
-    { name: "Golf Course & Country Club", time: "5 min", distance: "3 km", icon: '/location/amenities/locationiconsvg-06.svg' },
+    { name: "JVT Park", time: "1 min", distance: "150 m", icon: '/location/amenities/locationiconsvg-09.svg' },
+    { name: "Redwood Montessori Nursery", time: "4 min", distance: "2 km", icon: '/location/amenities/locationiconsvg-04.svg' },
+    { name: "Dubai British School", time: "6 min", distance: "4.5 km", icon: '/location/amenities/locationiconsvg-08.svg' },
+    { name: "Jumeirah East Park Centre", time: "7 min", distance: "2.1 km", icon: '/location/amenities/locationiconsvg-09.svg' },
+    { name: "Ibn Batuta Mall", time: "12 min", distance: "9 km", icon: '/location/amenities/locationiconsvg-08.svg' },
   ]
 
-  // Sorted ascending by distance
+  // Transport provided by user
   const transport = [
-    { name: "Gold Souq Metro Station", time: "12 min", distance: "7.6 km", icon: '/location/transport/locationiconsvg-11.svg' },
-    { name: "Jumeirah Street (D94)", time: "15 min", distance: "11.6 km", icon: '/location/transport/locationiconsvg-14.svg' },
-    { name: "Sheikh Zayed Road (E11)", time: "17 min", distance: "15.5 km", icon: '/location/transport/locationiconsvg-13.svg' },
-    { name: "Sheikh Mohammed Bin Zayed Road", time: "25 min", distance: "21 km", icon: '/location/transport/locationiconsvg-13.svg' },
-    { name: "Al Khail Road", time: "30 min", distance: "34 km", icon: '/location/transport/locationiconsvg-14.svg' },
+    { name: "Sheikh Mohammed bin Zayed Road (E311)", time: "3 min", distance: "1.4 km", icon: '/location/transport/locationiconsvg-13.svg' },
+    { name: "Al Khail Road (E44)", time: "8 min", distance: "3.3 km", icon: '/location/transport/locationiconsvg-14.svg' },
+    { name: "Jumeirah Golf Estates Metro Station", time: "11 min", distance: "8.9 km", icon: '/location/transport/locationiconsvg-11.svg' },
+    { name: "Al Maktoum International Airport", time: "22 min", distance: "27.6 km", icon: '/location/landmark/locationiconsvg-02.svg' },
+    { name: "Dubai International Airport", time: "35 min", distance: "47.3 km", icon: '/location/landmark/locationiconsvg-02.svg' },
   ]
 
   const data = activeTab === "landmark" ? landmarks : activeTab === "amenities" ? amenitiesData : transport
@@ -48,12 +48,12 @@ export function Location() {
         </div>
 
         <h2 className="text-xl sm:text-3xl md:text-4xl font-bold text-center mb-4 sm:mb-6 md:mb-8 leading-tight text-gray-900 px-4">
-          A Rare Harmony of Coastal Calm and City Pulse
+          Centre of Dubai with Seamless Connectivity
         </h2>
 
         <p className="text-center text-gray-700 mb-8 sm:mb-12 md:mb-16 max-w-3xl mx-auto text-sm sm:text-base md:text-lg px-4">
-          Perched just moments from Dubai Islands shores, the Twin Towers echo nature's rhythms while offering seamless
-          access to key city destinations and attractions.
+          Treppan Tower is strategically located with seamless access to key city destinations, business hubs, and lifestyle
+          attractions.
         </p>
 
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10 items-start">
@@ -61,14 +61,14 @@ export function Location() {
           <div className="space-y-6 order-2 lg:order-1">
             <div className="relative w-full h-[220px] sm:h-[280px] md:h-[330px] rounded-xl md:rounded-[4px] overflow-hidden shadow-2xl">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7214.171893335831!2d55.3005319!3d25.3013163!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f450012f91b7f%3A0xa7ef0e9ee623c48e!2sTreppan%20Serenique%20Residences!5e0!3m2!1sen!2sin!4v1766561532854!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.0254655978115!2d55.17132207607863!3d25.033209838322144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6d005f01e39d%3A0x3bec9fb8339333a5!2sTreppan%20Tower!5e0!3m2!1sen!2sin!4v1768267208157!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0, width: '100%', height: '100%' }}
                 allowFullScreen={true}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Treppan Serenique Residences Map"
+                title="Treppan Tower Map"
                 className="absolute inset-0 w-full h-full min-h-[220px] sm:min-h-[280px] md:min-h-[330px]"
               />
             </div>
@@ -77,11 +77,11 @@ export function Location() {
               className="w-full bg-[#DAAA97] hover:bg-[#c99a87] text-white py-5 md:py-6 text-base md:text-lg flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
               asChild
             >
-              <a
-                href="https://www.google.com/maps?ll=25.301316,55.300532&z=15&t=m&hl=en&gl=IN&mapclient=embed&cid=12100906799396537486"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+                <a
+                  href="https://maps.app.goo.gl/TVYyzVARqRdYdWdf6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                 <Navigation className="w-4 md:w-5 h-4 md:h-5" />
                 Get Direction
               </a>

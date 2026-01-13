@@ -57,20 +57,23 @@ export function CallToAction() {
           </div>
 
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 text-center animate-fade-in animation-delay-200 leading-tight">
-            Ready to Experience Treppan Serenique?
+            Ready to Experience Treppan Tower?
           </h2>
 
-          <p className="text-white/90 text-base md:text-xl leading-relaxed mb-12 text-center animate-fade-in animation-delay-300 px-4">
-            Step into a world built for wellbeing and future-ready living. From biohacking therapies to AI-enabled smart
-            homes and 53+ resort-style amenities, Treppan Serenique transforms everyday life into a symphony of ease,
-            renewal, and health-centered journey.
+          <p className="text-white/90 text-base md:text-xl leading-relaxed mb-4 text-center animate-fade-in animation-delay-300 px-4">
+            Step into a world where thoughtful design meets future-ready living.
           </p>
 
+          <p className="text-white/90 text-base md:text-xl leading-relaxed mb-12 text-center animate-fade-in animation-delay-300 px-4">
+            Experience a tranquil, villa-led sanctuary with calm at its core. From AI-enabled smart homes to wellness-centred design and 20+ curated amenities, Treppan Tower transforms everyday life into a rhythm of balance and ease.
+          </p>
+
+          {/*
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-12 animate-fade-in animation-delay-400">
             {[
-              { icon: Home, title: "Fully Furnished AI-enabled Smart Homes", desc: "Complete AI infrastructure throughout the project" },
-              { icon: Award, title: "53+ Amenities for a Resort Lifestyle", desc: "Endless possibilities for fitness, leisure, tranquility, and entertainment" },
-              { icon: MapPin, title: "Biohacking Lab for Wellness & Longevity", desc: "Curated therapies for healing, anti-ageing, and calmness" },
+              { icon: Home, title: "Fully Furnished AI-Enabled Residences", desc: "Apartments and sky villas come fully furnished with elegant, ready-to-live interiors and integrated AI smart-home systems." },
+              { icon: Award, title: "Extensive Resort-Style Amenities", desc: "Two full floors dedicated to fitness, entertainment, wellness, recreation and leisure — 20+ curated amenities for every age." },
+              { icon: MapPin, title: "Wellness & Longevity Lab", desc: "A dedicated biohacking and wellness lab plus smart sustainable systems, purified water, and clean indoor air to prioritise resident health." },
             ].map((feature, index) => (
               <div
                 key={index}
@@ -82,6 +85,7 @@ export function CallToAction() {
               </div>
             ))}
           </div>
+          */}
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center text-center align-middle animate-fade-in animation-delay-500">
             {/* <BookMeetingModal>

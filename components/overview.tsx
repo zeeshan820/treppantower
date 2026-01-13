@@ -32,13 +32,15 @@ export function Overview({ isGlobalPage }: { isGlobalPage?: boolean }) {
   }, [])
 
   const features = [
-    { icon: Waves, title: "Perpetual Island Escape", desc: "Set on Dubai Islands, just 90 seconds from the beach, offering effortless seaview island living every day." },
-    { icon: TreePalm, title: "Resort-Style Indulgence", desc: "53+ curated amenities across three levels, including a seaview infinity pool, rooftop lounge, bamboo park, and meditation pods." },
-    { icon: Zap, title: "Rejuvenation & Cellular Renewal", desc: "Advanced biohacking therapies such as cryotherapy, hyperbaric oxygen therapy, red light therapy, and immersive sensory pods." },
-    { icon: Wind, title: "Pure Air, Elevated Health", desc: "NASA-designed Airocide technology with advanced SAHU systems delivering exceptionally clean, fresh indoor air." },
-    { icon: Droplets, title: "Vitalising Water at Home", desc: "Hydrogenated, oxygenated, mineralised alkaline drinking water supplied directly to every residence." },
-    { icon: Brain, title: "Views That Restore the Mind", desc: "Deep balconies framing sea views, golf vistas, natural light, and calming coastal breezes." },
-    { icon: Home, title: "Intelligent Living, Lower Impact", desc: "AI-enabled residences that adapt to your lifestyle while reducing energy consumption by up to 30%." },
+    { icon: TreePalm, title: "Sanctuary from City Life", desc: "Treppan Tower is secluded from the city’s noise, offering a serene environment for families to relax and recharge." },
+    { icon: Sparkles, title: "Community-Centric Living", desc: "Two floors of thoughtfully designed amenities create spaces for residents to socialize, connect, and engage as one vibrant community." },
+    { icon: Zap, title: "Extensive Amenities", desc: "Residents enjoy two full floors dedicated to fitness, entertainment, wellness, recreation, and leisure activities." },
+    { icon: Wind, title: "Natural Light and Fresh Air", desc: "Expansive windows and greenery ensure sunlight and gentle breezes fill the lobby and living spaces, enhancing calm and well-being." },
+    { icon: Droplets, title: "Wellness-Focused Homes", desc: "Smart sustainable systems, purified water, clean indoor air, and advanced waste management ensure every home truly cares for its residents." },
+    { icon: Home, title: "Fully Furnished Residences", desc: "Apartments and sky villas come complete with elegant, ready-to live-in furnishings, blending style and functionality seamlessly." },
+    { icon: Brain, title: "AI-Enabled Smart Homes", desc: "Cutting-edge smart home features make everyday living effortless, convenient, and secure." },
+    { icon: Waves, title: "Breathtaking Views", desc: "Open vistas overlook Jumeirah Lake Towers, allowing residents to enjoy Dubai’s skyline from the comfort of home." },
+    { icon: Sparkles, title: "Thoughtful, Elegant Design", desc: "Polished textures, premium finishes, and nature-inspired decor create homes that feel sophisticated, warm, and welcoming." },
   ]
 
   return (
@@ -69,9 +71,7 @@ export function Overview({ isGlobalPage }: { isGlobalPage?: boolean }) {
           </div> */}
 
           <h2 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight transition-all duration-1000 delay-100 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
-            <span className="bg-gradient-to-r from-[#334058] via-[#4a5d7a] to-[#334058] bg-clip-text text-transparent">A Sanctuary of Serenity</span>
-            <br />
-            <span className="bg-gradient-to-r from-[#DAAA97] via-[#c99b86] to-[#DAAA97] bg-clip-text text-transparent">by the Sea</span>
+            <span className="bg-gradient-to-r from-[#334058] via-[#4a5d7a] to-[#334058] bg-clip-text text-transparent">A Haven of Curated Urban Living</span>
           </h2>
         </div>
 
@@ -81,24 +81,29 @@ export function Overview({ isGlobalPage }: { isGlobalPage?: boolean }) {
             <div className="relative rounded-2xl md:rounded-3xl overflow-hidden group shadow-2xl shadow-[#334058]/20">
               <div className="relative aspect-[4/3] sm:aspect-[16/9] md:aspect-[21/9] lg:aspect-[21/8]">
                 <Image
-                  src="/Sanctuary of Serenity.jpg"
-                  alt="Sanctuary of Serenity"
+                  src="/treppan-tower-overview.webp"
+                  alt="Treppan Tower Overview"
                   fill
                   className="object-cover transform group-hover:scale-105 transition-transform duration-1000"
                   sizes="100vw"
                   priority
                 />
-                {/* Gradient overlays only on md+ */}
-                <div className="hidden md:block absolute inset-0 bg-gradient-to-t from-[#334058]/90 via-[#334058]/30 to-transparent" />
-                <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-[#334058]/50 via-transparent to-transparent" />
+                {/* Stronger overlays for legible text */}
+                <div className="absolute inset-0 bg-black/30" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#334058]/70 via-[#334058]/30 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#334058]/60 via-transparent to-transparent" />
               </div>
 
               {/* Floating Content on Image - Desktop Only */}
-              <div className="hidden md:block absolute bottom-0 left-0 right-0 p-8 md:p-12">
-                <div className="max-w-3xl space-y-4">
-                  <p className="text-white/90 text-lg md:text-xl font-light leading-relaxed drop-shadow-lg">
-                    Welcome home to perpetual holidays at <span className="font-semibold text-[#DAAA97]">Treppan Serenique Residences</span>. Created with a singular purpose, this address reimagines home as a sanctuary for longevity, balance, and inspired island living.
+                <div className="hidden md:block absolute bottom-0 left-0 right-0 p-8 md:p-12">
+                <div className="max-w-3xl space-y-4 text-white drop-shadow-2xl">
+                  <p className="text-lg md:text-xl font-light leading-relaxed drop-shadow-lg">
+                    Treppan Tower is a serene sanctuary, located in Jumeirah Village Triangle. It creates a home where families and communities can truly flourish.
                   </p>
+                  <p className="text-lg md:text-xl font-light leading-relaxed drop-shadow-lg">
+                    The lobby welcomes residents with greenery and a gentle, refreshing breeze. Sunlight illuminates polished textures, crafting warmth, elegance, and calm serenity.
+                  </p>
+
                 </div>
               </div>
 
@@ -117,7 +122,7 @@ export function Overview({ isGlobalPage }: { isGlobalPage?: boolean }) {
                 <span className="text-xs font-bold text-[#334058] uppercase tracking-wider">Welcome</span>
               </div>
               <p className="text-white/90 text-sm sm:text-base leading-relaxed pt-2">
-                Welcome home to perpetual holidays at <span className="font-semibold text-[#DAAA97]">Treppan Serenique Residences</span>. Created with a singular purpose, this address reimagines home as a sanctuary for longevity, balance, and inspired island living.
+                Treppan Tower is a serene sanctuary in Jumeirah Village Triangle. Spacious apartments and sky villas offer breathtaking views and private gardens, fostering a connected, vibrant community.
               </p>
             </div>
           </div>
@@ -126,18 +131,18 @@ export function Overview({ isGlobalPage }: { isGlobalPage?: boolean }) {
           <div className={`grid md:grid-cols-2 gap-6 mb-16 md:mb-20 transition-all duration-1000 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
             <div className="group p-6 sm:p-8 rounded-2xl bg-white/80 backdrop-blur-sm border border-[#DAAA97]/20 shadow-xl shadow-[#DAAA97]/5 hover:shadow-2xl hover:shadow-[#DAAA97]/10 hover:border-[#DAAA97]/40 transition-all duration-500 hover:-translate-y-1">
               <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#DAAA97] to-[#c99b86] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                <Sparkles className="w-6 h-6 text-white" />
+                <Droplets className="w-6 h-6 text-white" />
               </div>
               <p className="text-gray-700 leading-relaxed text-base sm:text-lg">
-                Designed for those who seek more than luxury, Serenique was envisioned as a place where life unfolds with intention and ease. Every element nurtures physical vitality, mental clarity, and emotional harmony.
+                Homes are thoughtfully designed to nurture well-being and effortless living. Smart features, sustainable systems, and wellness amenities ensure care in every detail.
               </p>
             </div>
             <div className="group p-6 sm:p-8 rounded-2xl bg-white/80 backdrop-blur-sm border border-[#334058]/10 shadow-xl shadow-[#334058]/5 hover:shadow-2xl hover:shadow-[#334058]/10 hover:border-[#334058]/30 transition-all duration-500 hover:-translate-y-1">
               <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#334058] to-[#4a5d7a] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                <Brain className="w-6 h-6 text-white" />
+                <TreePalm className="w-6 h-6 text-white" />
               </div>
               <p className="text-gray-700 leading-relaxed text-base sm:text-lg">
-                Here, daily living transcends routine to become a state of calm, energy, and renewal. A future-forward way of living where wellbeing is sustained, minds are elevated, and life is lived beautifully longer.
+                Spacious apartments and sky villas offer breathtaking views and private gardens. Treppan Tower fosters a connected, vibrant community, where life feels complete.
               </p>
             </div>
           </div>
@@ -151,7 +156,7 @@ export function Overview({ isGlobalPage }: { isGlobalPage?: boolean }) {
               </span>
             </h3>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4 md:gap-6">
               {features.map((feature, index) => (
                 <div
                   key={index}
@@ -200,7 +205,7 @@ export function Overview({ isGlobalPage }: { isGlobalPage?: boolean }) {
                   <div className="flex items-baseline gap-2 justify-center sm:justify-start">
                     <span className="text-4xl sm:text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-[#DAAA97] to-white animate-shimmer" style={{ backgroundSize: '200% auto' }}>{price}</span>
                   </div>
-                  <p className="text-white/60 text-sm mt-2">Premium Seaview Residences</p>
+                  <p className="text-white/60 text-sm mt-2">Starting Price</p>
                 </div>
 
                 {/* <DownloadBrochureModal pdfUrl="/Treppan-Serenique-Brochure.pdf">

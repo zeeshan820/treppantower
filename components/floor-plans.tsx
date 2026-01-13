@@ -8,22 +8,32 @@ import { ChevronLeft, ChevronRight, Download, Sparkles, Ruler, Home } from "luci
 import { DownloadFloorPlanModal } from "@/components/download-floorplan-modal"
 
 export function FloorPlans() {
-  const [activeTab, setActiveTab] = useState<"2bedroom" | "3bedroom">("2bedroom")
+  const [activeTab, setActiveTab] = useState<"1bedroom" | "2bedroom" | "3bedroom">("1bedroom")
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const floorPlans2Bed = [
-    "/Floor Plan/2 Bed Room/Even-Floor-Tower-AB_Tower-A-02.webp",
-    "/Floor Plan/2 Bed Room/Even-Floor-Tower-AB_Tower-A-06.webp",
-    "/Floor Plan/2 Bed Room/Even-Floor-Tower-AB_Tower-B-03.webp",
+    "/treppan-tower-2-bed-1.webp",
+    "/treppan-tower-2-bed-2.webp",
+    "/treppan-tower-2-bed-3.webp",
+    "/treppan-tower-2-bed-4.webp",
   ];
 
   const floorPlans3Bed = [
-    "/Floor Plan/3 Bed Room/10-12-floor-Tower-A-B_Tower-A-01.webp",
-    "/Floor Plan/3 Bed Room/10-12-floor-Tower-A-B_Tower-A-04.webp",
-    "/Floor Plan/3 Bed Room/10-12-floor-Tower-A-B_Tower-B-04.webp",
+    "/treppan-tower-3-bed-1.webp",
+    "/treppan-tower-3-bed-2.webp",
+    "/treppan-tower-3-bed-3.webp",
+    "/treppan-tower-3-bed-4.webp",
   ];
 
-  const plans = activeTab === "2bedroom" ? floorPlans2Bed : floorPlans3Bed
+  const floorPlans1Bed = [
+    "/treppan-tower-1-bed-1.webp",
+    "/treppan-tower-1-bed-2.webp",
+    "/treppan-tower-1-bed-3.webp",
+    "/treppan-tower-1-bed-4.webp",
+    "/treppan-tower-1-bed-5.webp",
+  ];
+
+  const plans = activeTab === "1bedroom" ? floorPlans1Bed : activeTab === "2bedroom" ? floorPlans2Bed : floorPlans3Bed
 
   // Modal state for lightbox
   const [lightboxOpen, setLightboxOpen] = useState(false)
@@ -37,7 +47,7 @@ export function FloorPlans() {
   const nextLightbox = () => setLightboxIndex((prev) => (prev + 1) % plans.length)
   const prevLightbox = () => setLightboxIndex((prev) => (prev - 1 + plans.length) % plans.length)
 
-  const handleTabChange = (tab: "2bedroom" | "3bedroom") => {
+  const handleTabChange = (tab: "1bedroom" | "2bedroom" | "3bedroom") => {
     setActiveTab(tab)
     setCurrentIndex(0)
   }
@@ -67,10 +77,17 @@ export function FloorPlans() {
         </h2>
 
         <p className="text-center text-gray-700 mb-8 sm:mb-12 md:mb-16 max-w-3xl mx-auto text-sm sm:text-base md:text-lg px-4">
-          Treppan Serenique offers a curated collection of 2- and 3-bedroom residences designed for expansive living.
+          Treppan Tower offers 1–3 bedroom residences designed for light-filled, modern living.
         </p>
 
         <div className="flex justify-center gap-2 sm:gap-3 md:gap-4 mb-8 sm:mb-12 md:mb-16 px-4">
+          <Button
+            onClick={() => handleTabChange("1bedroom")}
+            variant={activeTab === "1bedroom" ? "default" : "outline"}
+            className={`px-6 sm:px-8 md:px-12 py-4 sm:py-5 md:py-6 lg:py-7 text-sm sm:text-base md:text-lg font-bold rounded-[4px] transition-all duration-500 ${activeTab === "1bedroom" ? "bg-gradient-to-r from-[#DAAA97] to-[#c99a87] hover:from-[#e5baa7] hover:to-[#d9aa97] text-white shadow-xl hover:shadow-2xl scale-105" : "text-gray-700 hover:border-[#DAAA97] hover:text-[#DAAA97] border-2"}`}
+          >
+            1 Bedroom
+          </Button>
           <Button
             onClick={() => handleTabChange("2bedroom")}
             variant={activeTab === "2bedroom" ? "default" : "outline"}
@@ -199,15 +216,21 @@ export function FloorPlans() {
                   </thead>
                   <tbody>
                     <tr className="border-b border-gray-100 hover:bg-[#DAAA97]/5 transition-colors">
+                      <td className="py-3 sm:py-4 md:py-5 font-semibold text-sm sm:text-base md:text-lg">1 Bedroom</td>
+                      <td className="py-3 sm:py-4 md:py-5 text-gray-700 text-xs sm:text-sm md:text-base lg:text-lg">
+                        628 - 1,165 sq. ft.
+                      </td>
+                    </tr>
+                    <tr className="border-b border-gray-100 hover:bg-[#DAAA97]/5 transition-colors">
                       <td className="py-3 sm:py-4 md:py-5 font-semibold text-sm sm:text-base md:text-lg">2 Bedroom</td>
                       <td className="py-3 sm:py-4 md:py-5 text-gray-700 text-xs sm:text-sm md:text-base lg:text-lg">
-                        980 - 1,483 sq. ft.
+                        1,028 - 1,571 sq. ft.
                       </td>
                     </tr>
                     <tr className="hover:bg-[#DAAA97]/5 transition-colors">
-                      <td className="py-3 sm:py-4 md:py-5 font-semibold text-sm sm:text-base md:text-lg">3 Bedroom</td>
+                      <td className="py-3 sm:py-4 md:py-5 font-semibold text-sm sm:text-base md:text-lg">3 Bedroom Skyvilla</td>
                       <td className="py-3 sm:py-4 md:py-5 text-gray-700 text-xs sm:text-sm md:text-base lg:text-lg">
-                        1,808 - 1,902 sq. ft.
+                        2,640 - 2,915 sq. ft.
                       </td>
                     </tr>
                   </tbody>

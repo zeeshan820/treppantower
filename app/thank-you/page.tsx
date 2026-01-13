@@ -43,7 +43,7 @@ const ThankYouPage = () => {
           >
             <img
               src="/treppan-serenique-logo.webp"
-              alt="Treppan Serenique"
+              alt="Treppan Tower"
               className="w-48 sm:w-56 md:w-64 object-contain"
             />
           </div>

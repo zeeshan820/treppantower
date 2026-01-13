@@ -14,12 +14,12 @@ export function Hero({ isGlobalPage }: { isGlobalPage?: boolean }) {
   const tabs = isGlobalPage ? [
     { value: "53+", label: "Resort Amenities" },
     { value: "90&nbsp;Sec.", label: "From Beach" },
-    { value: "$ 790K", label: "Starting Price" },
+    { value: "$ 790K", label: "Premium Residences" },
     { value: "1, 2 & 3 BR", label: "Fully furnished" },
   ] : [
     { value: "53+", label: "Resort Amenities" },
     { value: "90&nbsp;Sec.", label: "From Beach" },
-    { value: "AED 1.15M", label: "Starting Price" },
+    { value: "AED 1.15M", label: "Premium Residences" },
     { value: "1, 2 & 3 BR", label: "Fully furnished" },
   ];
 
@@ -55,21 +55,26 @@ export function Hero({ isGlobalPage }: { isGlobalPage?: boolean }) {
           </div>
         </div> */}
 
+        {/*
         <div className="mb-6">
           <div className="inline-block animate-fade-in animation-delay-200">
             <img
               src="/serenique-new-logo.webp"
-              alt="Treppan Serenique"
+              alt="Treppan Tower"
               className="mx-auto w-80 sm:w-96 md:w-180 object-contain drop-shadow-2xl"
             />
           </div>
         </div>
+        */}
 
         <div className="max-w-3xl mx-auto mb-8 sm:mb-10 animate-fade-in animation-delay-500">
-          <p className="text-lg sm:text-xl md:text-3xl text-white font-light mb-3 sm:mb-4 leading-relaxed drop-shadow-lg">
-            Experience The UAE's First Longevity Living Community
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3 sm:mb-4 leading-tight drop-shadow-lg">
+            Treppan Tower
+          </h1>
+          <p className="text-lg sm:text-xl md:text-2xl text-white font-light leading-relaxed drop-shadow-lg">
+            Step Inside A Tranquil Retreat in the Heart of JVT
           </p>
-          <div className="w-16 sm:w-24 h-1 bg-linear-to-r from-transparent via-[#DAAA97] to-transparent mx-auto" />
+          <div className="w-16 sm:w-24 h-1 bg-linear-to-r from-transparent via-[#DAAA97] to-transparent mx-auto mt-4" />
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center animate-fade-in animation-delay-700">
@@ -105,7 +110,8 @@ export function Hero({ isGlobalPage }: { isGlobalPage?: boolean }) {
           />
         </div>
 
-        <div className="mt-10 sm:mt-16 grid grid-cols-1 sm:grid-cols-4 gap-4 sm:gap-8 max-w-5xl mx-auto animate-fade-in animation-delay-800 items-center justify-center place-items-center">
+        {/*
+        <div className="mt-10 sm:mt-16 grid grid-cols-1 sm:grid-cols-4 gap-4 sm:gap-8 max-w-5xl mx-auto animate-fade-in animation-delay-800 itemscenter justify-center place-items-center">
           {tabs.map((stat, index) => (
             <div key={index} className="group">
               <div className="glass-effect rounded-lg p-4 sm:p-6 transform hover:scale-105 transition-all duration-500 hover:bg-white/15">
@@ -115,6 +121,7 @@ export function Hero({ isGlobalPage }: { isGlobalPage?: boolean }) {
             </div>
           ))}
         </div>
+        */}
       </div>
     </section>
   )
